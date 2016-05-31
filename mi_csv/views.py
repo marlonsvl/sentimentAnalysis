@@ -69,7 +69,8 @@ def index(request):
         csvfile = request.FILES['csv_file']
         #dialect = csv.Sniffer().sniff(codecs.open(csvfile, "utf8", 'rU').read(1024))
         csvfile.open()
-        reader = csv.reader(codecs.open(csvfile, "utf8", 'rU'), delimiter=',')
+        # reader = csv.reader(codecs.open(csvfile, "utf8", 'rU'), delimiter=',')
+        reader = csv.reader(csvfile.read(), delimiter=',')
         rows = list(reader)
         #print rows[0]
         cont = 0
