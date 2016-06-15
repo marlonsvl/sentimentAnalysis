@@ -15,12 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from django.conf import settings
+from django.conf.urls.static import static
 from mi_csv import views
 
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
+<<<<<<< HEAD
     url(r'^$', views.url_lista, name="url_lista"),
     url(r'^normalizar$', views.index_normalizacion, name="index_normalizacion"),
     url(r'^sentiwordnet$', views.index_sentiwordnet, name="index_sentiwordnet"),
 ]
+=======
+    url(r'^$', views.index, name="index"),
+] 
+>>>>>>> 89fad760f1e1b6720622859fa8cca6decba210bf
